@@ -49,21 +49,25 @@ for i in range (1000):
         count = 0
 
         final_link = 'https://ikman.lk' + links[count]
+
         os.system("clear")
-        def get_list():
+
+        def dict():
             for i in range (16):
                 global count
-                print()
-                print(item_list[count].text)
-                print(price[count].text)
-                print(final_link)
+                new_dict = {
+                    'item_name': item_list[count],
+                    'price': price[count],
+                    'link': links[count],
+                }
                 count = count + 1
+                print(new_dict['item_name'].text)
+                print(new_dict['price'].text)
+                print('https://ikman.lk' + new_dict['link'])
                 print()
-    
-        get_list() 
-         
-        print()
-        
+                print()
+        dict()    
+
 
 
 
